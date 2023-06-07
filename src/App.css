@@ -1,38 +1,83 @@
-.App {
+*{
+  margin:0px;
+  padding: 0px;;
+}
+
+.todo{
+  width: 25%;
+  min-width: 250px;
+  margin: auto;
+  background-color:#87BBA2 ;
+  padding: 3%;
   text-align: center;
+  color: #000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color:#F0F7EE ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-item-container{
+  width: 100%;
   display: flex;
+  max-height: 500px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: space-between;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-item-container::-webkit-scrollbar{
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.task-item{
+  background-color: #5D737E;
+  padding: 2%;
+  height: 30px;
+  width: 90%;
+  margin: auto;
+  color: #F0F7EE;
+  margin: 2%;
+  min-height: 30px;
+  vertical-align: middle;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+
+}
+
+.delete-button{
+  float: right;
+  width: 10%;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.delete-button:hover{
+  transform: scale(1.2);
+}
+
+.done-button{
+  float: right;
+  width: 10%;
+  height: 30px;
+  margin-right: 5%;
+}
+.todo-input{
+  width: 80%;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 3%;
+}
+
+@media screen and (min-width: 300px) {
+  .todo-item-container{
+    max-height: 280px;
   }
 }
